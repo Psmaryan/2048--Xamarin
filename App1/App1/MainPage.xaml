@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ValRec x:Key="vRecord" ValueRecord="0" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <StackLayout Padding="10" x:Name="mainStckCube" BackgroundColor="#BBDEFB">
+
+        <StackLayout Padding="4" BackgroundColor="Red" HorizontalOptions="StartAndExpand">
+            <Button x:Name="button7" Text="Back to Menu" FontAttributes="Bold" Clicked="button7_Clicked" HorizontalOptions="StartAndExpand" BackgroundColor="Red" BorderColor="Yellow" TextColor="Yellow"/>
+        </StackLayout>  
+
+      <!--  <StackLayout Orientation="Vertical"  >    
+              <Button x:Name="button4" Text="Up" Clicked="button4_Clicked" VerticalOptions="Center" HorizontalOptions="CenterAndExpand" FontSize="Medium" WidthRequest="70" HeightRequest="35"/>
+        </StackLayout>
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="10">
+            <Button x:Name="button3" Text="Left" Clicked="button3_Clicked" FontSize="Medium"  WidthRequest="70" HeightRequest="35" />
+            <Button x:Name="button2" Text="Right" Clicked="button2_Clicked" FontSize="Medium" WidthRequest="70" HeightRequest="35"/>
+        </StackLayout>
+
+        <Button x:Name="button" Text="Down" Clicked="button_Clicked" HorizontalOptions="Center" FontSize="Medium" WidthRequest="70" HeightRequest="35"/>
+               -->
+
+        <StackLayout BindingContext="{StaticResource vRecord}" HorizontalOptions="End" Orientation="Vertical" VerticalOptions="EndAndExpand">
+            <Label x:Name="record" Text="{Binding Path=ValueRecord}" HorizontalOptions="End" VerticalOptions="End" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+            <Button x:Name="butto5" Text="Return" Clicked="butto5_Clicked" HorizontalOptions="End" VerticalOptions="End" FontSize="Medium" BackgroundColor="Green" TextColor="Yellow"/>
+        </StackLayout>
+        
+        <StackLayout x:Name="stcCube" Padding="20" BackgroundColor="Black" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" WidthRequest="350">
+
+      
+                <Grid x:Name="grid">
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="70" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                        <RowDefinition Height="70" />
+                    </Grid.RowDefinitions>
+                    
+               
+
+            </Grid>
+        
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
